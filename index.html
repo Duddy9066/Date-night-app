@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheffield Student Life - Random Activity Selector</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="App">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <!-- HOMEi Logo -->
+                <div class="homei-logo">
+                    <div class="logo-emblem">
+                        <div class="logo-house">
+                            <div class="logo-face">
+                                <div class="logo-eyes">
+                                    <div class="logo-eye"></div>
+                                    <div class="logo-wink"></div>
+                                </div>
+                                <div class="logo-smile"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-text">
+                        <h1 class="logo-title">HOMEi</h1>
+                        <p class="logo-tagline">Your Helpful Housemate</p>
+                    </div>
+                </div>
+                
+                <h1 class="title">Sheffield Student Life</h1>
+                <p class="subtitle">Discover amazing activities for university students in Sheffield, UK</p>
+                <div class="header-decoration">
+                    <div class="decoration-line"></div>
+                    <div class="decoration-dot">🎓</div>
+                    <div class="decoration-line"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Carousel Container -->
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <div class="carousel-track" id="carouselTrack">
+                        <!-- Activities will be generated here -->
+                    </div>
+                </div>
+                
+                <!-- Carousel Navigation -->
+                <div class="carousel-nav">
+                    <button class="nav-btn prev-btn" id="prevBtn">‹</button>
+                    <button class="nav-btn next-btn" id="nextBtn">›</button>
+                </div>
+                
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators" id="indicators">
+                    <!-- Indicators will be generated here -->
+                </div>
+            </div>
+
+            <!-- Pick Button -->
+            <div class="pick-section">
+                <button class="pick-button" id="pickButton">🎯 Pick Random Activity!</button>
+                <p class="pick-instructions">Click to discover your next Sheffield student adventure!</p>
+            </div>
+
+            <!-- Result Section -->
+            <div class="result-section" id="resultSection" style="display: none;">
+                <h2>🎉 Your Next Adventure!</h2>
+                <div class="activity-card" id="activityCard">
+                    <!-- Activity details will be displayed here -->
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
