@@ -1,0 +1,676 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: linear-gradient(135deg, #ffc800 0%, #ffa000 50%, #ff6a00 100%);
+    min-height: 100vh;
+    color: white;
+    line-height: 1.6;
+}
+
+.App {
+    text-align: center;
+    min-height: 100vh;
+}
+
+/* Header Styles - HOMEi Brand Colors */
+.header {
+    background: linear-gradient(135deg, #ffc800 0%, #ffa000 50%, #ff6a00 100%);
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.08)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.08)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.08)"/><circle cx="75" cy="40" r="0.5" fill="rgba(255,255,255,0.08)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.4;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* HOMEi Logo */
+.homei-logo {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.logo-emblem {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #ffc800 0%, #ffa000 50%, #ff6a00 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(255, 106, 0, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+.logo-emblem::before {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: white;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 200, 0, 0.3);
+}
+
+.logo-house {
+    width: 45px;
+    height: 35px;
+    background: white;
+    border-radius: 6px 6px 0 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.logo-house::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 8px solid white;
+}
+
+.logo-house::after {
+    content: '';
+    position: absolute;
+    top: -6px;
+    right: -2px;
+    width: 6px;
+    height: 8px;
+    background: white;
+    border-radius: 2px;
+}
+
+.logo-face {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    margin-top: 2px;
+}
+
+.logo-eyes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.logo-eye {
+    width: 4px;
+    height: 4px;
+    background: #ff6a00;
+    border-radius: 50%;
+}
+
+.logo-wink {
+    width: 6px;
+    height: 2px;
+    background: #ff6a00;
+    border-radius: 1px;
+    transform: rotate(-15deg);
+}
+
+.logo-smile {
+    width: 14px;
+    height: 6px;
+    border: 2px solid #ff6a00;
+    border-top: none;
+    border-radius: 0 0 14px 14px;
+    margin-top: 1px;
+}
+
+.logo-text {
+    text-align: left;
+}
+
+.logo-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #ffc800;
+    text-shadow: 2px 2px 4px rgba(255, 106, 0, 0.3);
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin: 0;
+}
+
+.logo-tagline {
+    font-size: 1.2rem;
+    color: #ff6a00;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 0.02em;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 1rem 0 1.5rem 0;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(255, 106, 0, 0.3);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    margin: 0 0 2.5rem 0;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 400;
+    line-height: 1.5;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.decoration-line {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+    border-radius: 2px;
+}
+
+.decoration-dot {
+    font-size: 2rem;
+    animation: pulse 2s infinite;
+    filter: drop-shadow(2px 2px 4px rgba(255, 106, 0, 0.3));
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Main Content */
+.main-content {
+    padding: 3rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Carousel Container - HOMEi Style */
+.carousel-container {
+    position: relative;
+    margin: 4rem 0;
+    padding: 0 2rem;
+}
+
+.carousel-wrapper {
+    overflow: hidden;
+    border-radius: 25px;
+    box-shadow: 0 20px 60px rgba(255, 106, 0, 0.15);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    gap: 0;
+    padding: 2rem 0;
+}
+
+.carousel-item {
+    min-width: 300px;
+    height: 220px;
+    background: linear-gradient(135deg, var(--color), var(--color-dark));
+    border-radius: 20px;
+    margin: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    box-shadow: 0 15px 40px rgba(255, 106, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.carousel-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.carousel-item:hover::before {
+    opacity: 1;
+}
+
+.carousel-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 60px rgba(255, 106, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.carousel-item.active {
+    transform: scale(1.05);
+    box-shadow: 0 25px 60px rgba(255, 106, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.activity-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.carousel-item:hover .activity-icon {
+    transform: scale(1.1);
+}
+
+.activity-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.3;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.02em;
+}
+
+.activity-price {
+    font-size: 1rem;
+    opacity: 0.95;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    transition: all 0.3s ease;
+}
+
+.carousel-item:hover .activity-price {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+}
+
+/* Carousel Navigation - HOMEi Style */
+.carousel-nav {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 10;
+}
+
+.nav-btn {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    color: #ff6a00;
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    pointer-events: auto;
+    box-shadow: 0 8px 25px rgba(255, 106, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+.nav-btn:hover {
+    background: white;
+    transform: scale(1.1);
+    box-shadow: 0 12px 35px rgba(255, 106, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.nav-btn:active {
+    transform: scale(0.95);
+}
+
+.nav-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Carousel Indicators - HOMEi Style */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 2.5rem;
+}
+
+.indicator {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 2px solid transparent;
+}
+
+.indicator.active {
+    background: #ffc800;
+    transform: scale(1.3);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.indicator:hover {
+    background: rgba(255, 200, 0, 0.8);
+    transform: scale(1.2);
+}
+
+/* Pick Section - HOMEi Style */
+.pick-section {
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.pick-button {
+    background: linear-gradient(135deg, #ffc800, #ffa000, #ff6a00);
+    color: white;
+    border: none;
+    padding: 1.5rem 3rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 15px 40px rgba(255, 106, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    min-width: 300px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    letter-spacing: 0.02em;
+}
+
+.pick-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+    transition: left 0.6s ease;
+}
+
+.pick-button:hover::before {
+    left: 100%;
+}
+
+.pick-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(255, 106, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.pick-button:active {
+    transform: translateY(-2px);
+}
+
+.pick-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.pick-button.picking {
+    animation: pulse 1s infinite;
+}
+
+.pick-instructions {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+
+/* Result Section - HOMEi Style */
+.result-section {
+    margin-top: 4rem;
+    animation: fadeInUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.result-section h2 {
+    font-size: 3rem;
+    margin-bottom: 2.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(255, 106, 0, 0.3);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.activity-card {
+    background: rgba(255, 255, 255, 0.98);
+    color: #333;
+    padding: 3rem;
+    border-radius: 25px;
+    box-shadow: 0 20px 60px rgba(255, 106, 0, 0.2);
+    max-width: 700px;
+    margin: 0 auto;
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 200, 0, 0.3);
+}
+
+.activity-card h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #ff6a00;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.activity-card p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.location, .price {
+    font-size: 1.1rem;
+    color: #777;
+    margin-top: 1.5rem;
+    font-weight: 600;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Celebration Animation */
+@keyframes celebration {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.15);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    75% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        padding: 3rem 1rem;
+    }
+    
+    .logo-emblem {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .logo-house {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .logo-title {
+        font-size: 2.5rem;
+    }
+    
+    .logo-tagline {
+        font-size: 1rem;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .decoration-line {
+        width: 60px;
+    }
+    
+    .main-content {
+        padding: 2rem 1rem;
+    }
+    
+    .carousel-container {
+        padding: 0 1rem;
+    }
+    
+    .carousel-item {
+        min-width: 260px;
+        height: 200px;
+        padding: 1.5rem;
+    }
+    
+    .activity-title {
+        font-size: 1.1rem;
+    }
+    
+    .nav-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    
+    .pick-button {
+        padding: 1.2rem 2.5rem;
+        font-size: 1.2rem;
+        min-width: 280px;
+    }
+    
+    .result-section h2 {
+        font-size: 2.5rem;
+    }
+    
+    .activity-card {
+        padding: 2rem;
+        margin: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .homei-logo {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .logo-text {
+        text-align: center;
+    }
+    
+    .carousel-item {
+        min-width: 240px;
+        height: 180px;
+        padding: 1.2rem;
+    }
+    
+    .activity-title {
+        font-size: 1rem;
+    }
+    
+    .nav-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+    
+    .pick-button {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        min-width: 260px;
+    }
+}
